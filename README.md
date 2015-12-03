@@ -108,3 +108,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 内部封装，外部调用起来比较方便
+
+
+
+可通过 build.gradle 直接导入
+
+  dependencies {
+
+    compile 'com.jorge.circleview:circlelibrary:1.0.0'
+}
