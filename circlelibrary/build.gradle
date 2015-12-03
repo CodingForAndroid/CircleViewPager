@@ -28,8 +28,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
 }
 
-def siteUrl = 'https://github.com/AlanCheen/CrashCatcher'   // 项目的主页
-def gitUrl = 'git@github.com:AlanCheen/CrashCatcher.git'   // Git仓库的url
+def siteUrl = 'https://github.com/CodingForAndroid/CircleViewPager'   // 项目的主页
+def gitUrl = 'https://github.com/CodingForAndroid/CircleViewPager.git'   // Git仓库的url
 group = "com.jorge.circleview"            // Maven Group ID for the artifact，一般填你唯一的包名
 install {
     repositories.mavenInstaller {
@@ -38,7 +38,7 @@ install {
             project {
                 packaging 'aar'
                 // Add your description here
-                name 'Android CrashCatcher'     //项目的描述 你可以多写一点
+                name 'Android CicleViewPager'     //项目的描述 你可以多写一点
                 url siteUrl
                 // Set your license
                 licenses {
@@ -49,9 +49,9 @@ install {
                 }
                 developers {
                     developer {
-                        id 'alancheen'        //填写的一些基本信息
-                        name '程序亦非猿'
-                        email 'alancheen06@gmail.com'
+                        id 'codingforandroid'        //填写的一些基本信息
+                        name 'jorge'
+                        email '474010224@qq.com'
                     }
                 }
                 scm {
@@ -87,7 +87,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "CrashCatcher"    //发布到JCenter上的项目名字
+        name = "circlelibrary"    //发布到JCenter上的项目名字
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
