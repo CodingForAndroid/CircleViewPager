@@ -6,27 +6,20 @@ Android  自动轮播图
  使用说明：
 
  布局文件
-
- <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.jorge.circleviewpager.MainActivity">
+    android:layout_height="match_parent">
 
     <com.jorge.circlelibrary.ImageCycleView
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:id="@+id/cycleView"/>
+</LinearLayout>
 
-        </LinearLayout>
 
 相关Activity
-
 package com.jorge.circleviewpager;
 
 import android.content.Context;
@@ -45,17 +38,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         /** 找到轮播控件*/
-
         imageCycleView= (ImageCycleView) findViewById(R.id.cycleView);
-
         /**装在数据的集合  文字描述*/
-
         ArrayList<String> imageDescList=new ArrayList<>();
-
         /**装在数据的集合  图片地址*/
-
         ArrayList<String> urlList=new ArrayList<>();
 
         /**添加数据*/
@@ -76,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**初始化轮播图*/
     public void initCarsuelView(ArrayList<String> imageDescList,ArrayList<String>urlList) {
-
         LinearLayout.LayoutParams cParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, getScreenHeight(MainActivity.this) * 3 / 10);
         imageCycleView.setLayoutParams(cParams);
         ImageCycleView.ImageCycleViewListener mAdCycleViewListener = new ImageCycleView.ImageCycleViewListener() {
@@ -93,9 +79,9 @@ public class MainActivity extends AppCompatActivity {
         /**设置数据*/
         imageCycleView.setImageResources(imageDescList,urlList, mAdCycleViewListener);
         imageCycleView.startImageCycle();
-
     }
-     /**
+
+    /**
      * 得到屏幕的高度
      * @param context
      * @return
@@ -108,11 +94,11 @@ public class MainActivity extends AppCompatActivity {
         dm = context.getApplicationContext().getResources().getDisplayMetrics();
         return dm.heightPixels;
     }
-  }
+
+}
+
 
 内部封装，外部调用起来比较方便
-
-
 
 可通过 build.gradle 直接导入
 
