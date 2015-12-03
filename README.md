@@ -47,11 +47,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
         /** 找到轮播控件*/
+        
         imageCycleView= (ImageCycleView) findViewById(R.id.cycleView);
+        
         /**装在数据的集合  文字描述*/
+        
         ArrayList<String> imageDescList=new ArrayList<>();
+        
         /**装在数据的集合  图片地址*/
+        
         ArrayList<String> urlList=new ArrayList<>();
 
         /**添加数据*/
@@ -72,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
     
     /**初始化轮播图*/ 
     public void initCarsuelView(ArrayList<String> imageDescList,ArrayList<String>urlList) {
+    
         LinearLayout.LayoutParams cParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, getScreenHeight(MainActivity.this) * 3 / 10);
         imageCycleView.setLayoutParams(cParams);
         ImageCycleView.ImageCycleViewListener mAdCycleViewListener = new ImageCycleView.ImageCycleViewListener() {
