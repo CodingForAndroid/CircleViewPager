@@ -7,9 +7,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
 import com.jorge.circlelibrary.ImageCycleView;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,18 +16,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /** 找到轮播控件*/
         imageCycleView= (ImageCycleView) findViewById(R.id.cycleView);
-
+        /**装在数据的集合  文字描述*/
         ArrayList<String> imageDescList=new ArrayList<>();
+        /**装在数据的集合  图片地址*/
         ArrayList<String> urlList=new ArrayList<>();
 
-
         /**添加数据*/
-//        http://attach.bbs.miui.com/forum/month_1012/101203122706c89249c8f58fcc.jpg
-//        http://bbsdown10.cnmo.com/attachments/201308/06/091441rn5ww131m0gj55r0.jpg
-//        http://kuoo8.com/wall_up/hsf2288/200801/2008012919460743597.jpg
-//        http://d.3987.com/taiqiumein_141001/007.jpg
-//        http://kuoo8.com/wall_up/hsf2288/200807/2008071115370276173.jpg
         urlList.add("http://attach.bbs.miui.com/forum/month_1012/101203122706c89249c8f58fcc.jpg");
         urlList.add("http://bbsdown10.cnmo.com/attachments/201308/06/091441rn5ww131m0gj55r0.jpg");
         urlList.add("http://kuoo8.com/wall_up/hsf2288/200801/2008012919460743597.jpg");
@@ -45,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
         initCarsuelView(imageDescList, urlList);
     }
 
-
-    // 初始化轮播图
+    /**初始化轮播图*/
     public void initCarsuelView(ArrayList<String> imageDescList,ArrayList<String>urlList) {
         LinearLayout.LayoutParams cParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, getScreenHeight(MainActivity.this) * 3 / 10);
         imageCycleView.setLayoutParams(cParams);
@@ -57,9 +50,11 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void displayImage(String imageURL, ImageView imageView) {
+                /**在此方法中，显示图片，可以用自己的图片加载库，也可以用本demo中的（Imageloader）*/
                 ImageLoaderHelper.getInstance().loadImage(imageURL, imageView);
             }
         };
+        /**设置数据*/
         imageCycleView.setImageResources(imageDescList,urlList, mAdCycleViewListener);
         imageCycleView.startImageCycle();
     }
@@ -70,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
      * @return
      */
     public static int getScreenHeight(Context context){
-
         if (null == context) {
             return 0;
         }
@@ -78,7 +72,5 @@ public class MainActivity extends AppCompatActivity {
         dm = context.getApplicationContext().getResources().getDisplayMetrics();
         return dm.heightPixels;
     }
-
-
 
 }
