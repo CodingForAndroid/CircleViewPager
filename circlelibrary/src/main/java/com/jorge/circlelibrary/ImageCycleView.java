@@ -22,38 +22,38 @@ import java.util.ArrayList;
  */
 public class ImageCycleView extends LinearLayout {
 	/**
-	 * ä¸Šä¸‹æ–‡
+	 * ÉÏÏÂÎÄ
 	 */
 	private Context mContext;
 	/**
-	 * å›¾ç‰‡è½®æ’­è§†å›¾
+	 * Í¼Æ¬ÂÖ²¥ÊÓÍ¼
 	 */
 	private ViewPager mAdvPager = null;
 	/**
-	 * æ»šåŠ¨å›¾ç‰‡è§†å›¾é€‚é…
+	 * ¹ö¶¯Í¼Æ¬ÊÓÍ¼ÊÊÅä
 	 */
 	private ImageCycleAdapter mAdvAdapter;
 	/**
-	 * å›¾ç‰‡è½®æ’­æŒ‡ç¤ºå™¨æ§ä»¶
+	 * Í¼Æ¬ÂÖ²¥Ö¸Ê¾Æ÷¿Ø¼ş
 	 */
 	private ViewGroup mGroup;
 
 	/**
-	 * å›¾ç‰‡è½®æ’­æŒ‡ç¤ºä¸ªå›¾
+	 * Í¼Æ¬ÂÖ²¥Ö¸Ê¾¸öÍ¼
 	 */
 	private ImageView mImageView = null;
 
 	/**
-	 * æ»šåŠ¨å›¾ç‰‡æŒ‡ç¤ºè§†å›¾åˆ—è¡¨
+	 * ¹ö¶¯Í¼Æ¬Ö¸Ê¾ÊÓÍ¼ÁĞ±í
 	 */
 	private ImageView[] mImageViews = null;
 
 	/**
-	 * å›¾ç‰‡æ»šåŠ¨å½“å‰å›¾ç‰‡ä¸‹æ ‡
+	 * Í¼Æ¬¹ö¶¯µ±Ç°Í¼Æ¬ÏÂ±ê
 	 */
 	private int mImageIndex = 0;
 	/**
-	 * æ‰‹æœºå¯†åº¦
+	 * ÊÖ»úÃÜ¶È
 	 */
 	private float mScale;
 	private boolean isStop;
@@ -87,25 +87,25 @@ public class ImageCycleView extends LinearLayout {
 			public boolean onTouch(View v, MotionEvent event) {
 				switch (event.getAction()) {
 					case MotionEvent.ACTION_UP:
-						// å¼€å§‹å›¾ç‰‡æ»šåŠ¨
+						// ¿ªÊ¼Í¼Æ¬¹ö¶¯
 						startImageTimerTask();
 						break;
 					default:
-						// åœæ­¢å›¾ç‰‡æ»šåŠ¨
+						// Í£Ö¹Í¼Æ¬¹ö¶¯
 						stopImageTimerTask();
 						break;
 				}
 				return false;
 			}
 		});
-		// æ»šåŠ¨å›¾ç‰‡å³ä¸‹æŒ‡ç¤ºå™¨è§†
+		// ¹ö¶¯Í¼Æ¬ÓÒÏÂÖ¸Ê¾Æ÷ÊÓ
 		mGroup = (ViewGroup) findViewById(R.id.circles);
 		imageName = (TextView) findViewById(R.id.viewGroup2);
 	}
 
 
 	/**
-	 * è£…å¡«å›¾ç‰‡æ•°æ®
+	 * ×°ÌîÍ¼Æ¬Êı¾İ
 	 *
 	 * @param  :
 	 * @param imageCycleViewListener
@@ -119,14 +119,14 @@ public class ImageCycleView extends LinearLayout {
 			return;
 		}
 
-		// æ¸…é™¤
+		// Çå³ı
 		mGroup.removeAllViews();
-		// å›¾ç‰‡å¹¿å‘Šæ•°é‡
+		// Í¼Æ¬¹ã¸æÊıÁ¿
 		final int imageCount = imageUrlList.size();
 		mImageViews = new ImageView[imageCount];
 		for (int i = 0; i < imageCount; i++) {
 			mImageView = new ImageView(mContext);
-			int imageParams = (int) (mScale * 10 + 0.5f);// XPä¸DPè½¬æ¢ï¼Œé€‚åº”åº”ä¸åŒåˆ†è¾¨ç‡
+			int imageParams = (int) (mScale * 10 + 0.5f);// XPÓëDP×ª»»£¬ÊÊÓ¦Ó¦²»Í¬·Ö±æÂÊ
 			int imagePadding = (int) (mScale * 5 + 0.5f);
 			LayoutParams params=new LayoutParams(imageParams,imageParams);
 			params.leftMargin=10;
@@ -151,30 +151,30 @@ public class ImageCycleView extends LinearLayout {
 	}
 
 	/**
-	 * å›¾ç‰‡è½®æ’­(æ‰‹åŠ¨æ§åˆ¶è‡ªåŠ¨è½®æ’­ä¸å¦ï¼Œä¾¿äºèµ„æºæ§ä»¶ï¼‰
+	 * Í¼Æ¬ÂÖ²¥(ÊÖ¶¯¿ØÖÆ×Ô¶¯ÂÖ²¥Óë·ñ£¬±ãÓÚ×ÊÔ´¿Ø¼ş£©
 	 */
 	public void startImageCycle() {
 		startImageTimerTask();
 	}
 
 	/**
-	 * æš‚åœè½®æ’­â€”ç”¨äºèŠ‚çœèµ„æº
+	 * ÔİÍ£ÂÖ²¥¡ªÓÃÓÚ½ÚÊ¡×ÊÔ´
 	 */
 	public void pushImageCycle() {
 		stopImageTimerTask();
 	}
 
 	/**
-	 * å›¾ç‰‡æ»šåŠ¨ä»»åŠ¡
+	 * Í¼Æ¬¹ö¶¯ÈÎÎñ
 	 */
 	private void startImageTimerTask() {
 		stopImageTimerTask();
-		// å›¾ç‰‡æ»šåŠ¨
+		// Í¼Æ¬¹ö¶¯
 		mHandler.postDelayed(mImageTimerTask, 3000);
 	}
 
 	/**
-	 * åœæ­¢å›¾ç‰‡æ»šåŠ¨ä»»åŠ¡
+	 * Í£Ö¹Í¼Æ¬¹ö¶¯ÈÎÎñ
 	 */
 	private void stopImageTimerTask() {
 		isStop=true;
@@ -184,14 +184,14 @@ public class ImageCycleView extends LinearLayout {
 	private Handler mHandler = new Handler();
 
 	/**
-	 * å›¾ç‰‡è‡ªåŠ¨è½®æ’­Task
+	 * Í¼Æ¬×Ô¶¯ÂÖ²¥Task
 	 */
 	private Runnable mImageTimerTask = new Runnable() {
 		@Override
 		public void run() {
 			if (mImageViews != null) {
 				mAdvPager.setCurrentItem(mAdvPager.getCurrentItem()+1);
-				if(!isStop){  //if  isStop=true   //å½“ä½ é€€å‡ºå è¦æŠŠè¿™ä¸ªç»™åœä¸‹æ¥ ä¸ç„¶ è¿™ä¸ªä¸€ç›´å­˜åœ¨ å°±ä¸€ç›´åœ¨åå°å¾ªç¯
+				if(!isStop){  //if  isStop=true   //µ±ÄãÍË³öºó Òª°ÑÕâ¸ö¸øÍ£ÏÂÀ´ ²»È» Õâ¸öÒ»Ö±´æÔÚ ¾ÍÒ»Ö±ÔÚºóÌ¨Ñ­»·
 					mHandler.postDelayed(mImageTimerTask, 3000);
 				}
 
@@ -200,7 +200,7 @@ public class ImageCycleView extends LinearLayout {
 	};
 
 	/**
-	 * è½®æ’­å›¾ç‰‡ç›‘å¬
+	 * ÂÖ²¥Í¼Æ¬¼àÌı
 	 *
 	 * @author minking
 	 */
@@ -216,9 +216,9 @@ public class ImageCycleView extends LinearLayout {
 		@Override
 		public void onPageSelected(int index) {
 			index=index%mImageViews.length;
-			// è®¾ç½®å½“å‰æ˜¾ç¤ºçš„å›¾ç‰‡
+			// ÉèÖÃµ±Ç°ÏÔÊ¾µÄÍ¼Æ¬
 			mImageIndex = index;
-			// è®¾ç½®å›¾ç‰‡æ»šåŠ¨æŒ‡ç¤ºå™¨èƒŒ
+			// ÉèÖÃÍ¼Æ¬¹ö¶¯Ö¸Ê¾Æ÷±³
 			mImageViews[index].setBackgroundResource(R.mipmap.banner_dot_focus);
 			imageName.setText(mImageDescList.get(index));
 			for (int i = 0; i < mImageViews.length; i++) {
@@ -232,18 +232,18 @@ public class ImageCycleView extends LinearLayout {
 	private class ImageCycleAdapter extends PagerAdapter {
 
 		/**
-		 * å›¾ç‰‡è§†å›¾ç¼“å­˜åˆ—è¡¨
+		 * Í¼Æ¬ÊÓÍ¼»º´æÁĞ±í
 		 */
 		private ArrayList<ClickableImageView> mImageViewCacheList;
 
 		/**
-		 * å›¾ç‰‡èµ„æºåˆ—è¡¨
+		 * Í¼Æ¬×ÊÔ´ÁĞ±í
 		 */
 		private ArrayList<String> mAdList = new ArrayList<String>();
 		private ArrayList<String> nameList = new ArrayList<String>();
 
 		/**
-		 * å¹¿å‘Šå›¾ç‰‡ç‚¹å‡»ç›‘å¬
+		 * ¹ã¸æÍ¼Æ¬µã»÷¼àÌı
 		 */
 		private ImageCycleViewListener mImageCycleViewListener;
 
@@ -279,7 +279,7 @@ public class ImageCycleView extends LinearLayout {
 			} else {
 				imageView = mImageViewCacheList.remove(0);
 			}
-			// è®¾ç½®å›¾ç‰‡ç‚¹å‡»ç›‘å¬
+			// ÉèÖÃÍ¼Æ¬µã»÷¼àÌı
 			imageView.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -303,13 +303,13 @@ public class ImageCycleView extends LinearLayout {
 	}
 
 	/**
-	 * è½®æ’­æ§ä»¶çš„ç›‘å¬äº‹ä»¶
+	 * ÂÖ²¥¿Ø¼şµÄ¼àÌıÊÂ¼ş
 	 *
 	 * @author minking
 	 */
 	public  interface ImageCycleViewListener {
 		/**
-		 * åŠ è½½å›¾ç‰‡èµ„æº
+		 * ¼ÓÔØÍ¼Æ¬×ÊÔ´
 		 *
 		 * @param imageURL
 		 * @param imageView
@@ -317,12 +317,13 @@ public class ImageCycleView extends LinearLayout {
 		void displayImage(String imageURL, ImageView imageView);
 
 		/**
-		 * å•å‡»å›¾ç‰‡äº‹ä»¶
+		 * µ¥»÷Í¼Æ¬ÊÂ¼ş
 		 *
 		 * @param position
 		 * @param imageView
 		 */
 		void onImageClick(int position, View imageView);
 	}
+
 
 }
