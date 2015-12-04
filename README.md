@@ -1,7 +1,7 @@
 # CircleViewPager
 自动轮播图
   ![image](https://github.com/CodingForAndroid/CircleViewPager/blob/master/screenshot/view.gif)
-Android  自动轮播图
+Android  自动轮播图，接入方便 ，欢迎使用~
 
  使用说明：
 
@@ -35,7 +35,7 @@ Android  自动轮播图
         imageDescList.add("身材妙曼");
         initCarsuelView(imageDescList, urlList);
     }
-    /**初始化轮播图*/
+    /**初始化轮播图的关键方法*/ 
     public void initCarsuelView(ArrayList<String> imageDescList,ArrayList<String>urlList) {
         LinearLayout.LayoutParams cParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, getScreenHeight(MainActivity.this) * 3 / 10);
         imageCycleView.setLayoutParams(cParams);
@@ -68,11 +68,7 @@ Android  自动轮播图
         return dm.heightPixels;
     }
 
-
-
-
 内部封装，外部调用起来比较方便
-
 可通过 build.gradle 直接导入
 
   dependencies {
