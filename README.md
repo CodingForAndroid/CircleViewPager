@@ -74,3 +74,10 @@ Android  自动轮播图，接入方便 ，欢迎使用~
   dependencies {
     compile 'com.jorge.circleview:circlelibrary:1.0.0'
 }
+
+
+
+友情提示：
+
+一： 不要忘记添加  联网  读写 权限， 可以复制 本项目中的权限 。
+二： 不要忘记添加 图片缓存框架， 本Demo 中用的是  Android-Universal-Image-Loader ,本地jar包。
