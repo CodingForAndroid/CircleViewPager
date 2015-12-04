@@ -83,3 +83,5 @@ Android  自动轮播图，接入方便 ，欢迎使用~
 
 
 二： 不要忘记添加 图片缓存框架， 本Demo 中用的是  Android-Universal-Image-Loader ,本地jar包。
+
+三： 工具类 皆可使用本Demo 中已有的。
