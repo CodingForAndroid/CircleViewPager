@@ -24,12 +24,6 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<String> urlList=new ArrayList<>();
 
         /**添加数据*/
-        // urlList.add("http://attach.bbs.miui.com/forum/month_1012/101203122706c89249c8f58fcc.jpg");
-        // urlList.add("http://bbsdown10.cnmo.com/attachments/201308/06/091441rn5ww131m0gj55r0.jpg");
-        // urlList.add("http://kuoo8.com/wall_up/hsf2288/200801/2008012919460743597.jpg");
-        // urlList.add("http://d.3987.com/taiqiumein_141001/007.jpg");
-        // urlList.add("http://kuoo8.com/wall_up/hsf2288/200807/2008071115370276173.jpg");
-        
         urlList.add("http://attach.bbs.miui.com/forum/month_1012/101203122706c89249c8f58fcc.jpg");
         urlList.add("http://bbsdown10.cnmo.com/attachments/201308/06/091441rn5ww131m0gj55r0.jpg");
 //        urlList.add("http://kuoo8.com/wall_up/hsf2288/200801/2008012919460743597.jpg");
