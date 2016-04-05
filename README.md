@@ -25,9 +25,9 @@ Android  自动轮播图，接入方便 ，欢迎使用~
         /**添加数据*/
         urlList.add("http://attach.bbs.miui.com/forum/month_1012/101203122706c89249c8f58fcc.jpg");
         urlList.add("http://bbsdown10.cnmo.com/attachments/201308/06/091441rn5ww131m0gj55r0.jpg");
-        urlList.add("http://kuoo8.com/wall_up/hsf2288/200801/2008012919460743597.jpg");
+        urlList.add("http://attach.bbs.miui.com/forum/201604/05/001754vp6j0vmcj49f0evc.jpg.thumb.jpg");
         urlList.add("http://d.3987.com/taiqiumein_141001/007.jpg");
-        urlList.add("http://kuoo8.com/wall_up/hsf2288/200807/2008071115370276173.jpg");
+        urlList.add("http://attach.bbs.miui.com/forum/201604/05/100838d2b99k6ihk32a36a.jpg.thumb.jpg");
         imageDescList.add("小仓柚子");
         imageDescList.add("抚媚妖娆性感美女");
         imageDescList.add("热血沸腾 比基尼");
