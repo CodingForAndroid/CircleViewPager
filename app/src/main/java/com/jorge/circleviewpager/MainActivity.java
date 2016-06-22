@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         imageDescList.add(" 台球美女");
         imageDescList.add("身材妙曼");
 
+
         initCarsuelView(imageDescList, urlList);
     }
 
