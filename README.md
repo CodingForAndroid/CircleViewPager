@@ -102,7 +102,7 @@
 
 友情提示：
 
-一： 不要忘记添加  联网  读写 权限， 可以复制 本项目中的权限 。
+一： 不要忘记添加  联网  读写 权限， 可以复制 本项目中的权限 。    
 二：保证 ImageCycleView的 父布局是LinearLayout 否则可能会报异常，比如 java.lang.ClassCastException: android.widget.LinearLayout$LayoutParams cannot be cast to android.widget.RelativeLayout$LayoutParams    
 
 三： 不要忘记添加 图片缓存框架， 本Demo 中用的是  Android-Universal-Image-Loader ,本地jar包。
