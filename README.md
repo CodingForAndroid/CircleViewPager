@@ -41,10 +41,10 @@
         /**添加数据*/
         urlList.add("http://attach.bbs.miui.com/forum/month_1012/101203122706c89249c8f58fcc.jpg");
         urlList.add("http://bbsdown10.cnmo.com/attachments/201308/06/091441rn5ww131m0gj55r0.jpg");
-//        urlList.add("http://kuoo8.com/wall_up/hsf2288/200801/2008012919460743597.jpg");
-        urlList.add("http://attach.bbs.miui.com/forum/201604/05/001754vp6j0vmcj49f0evc.jpg.thumb.jpg");
-        urlList.add("http://d.3987.com/taiqiumein_141001/007.jpg");
-        urlList.add("http://attach.bbs.miui.com/forum/201604/05/100838d2b99k6ihk32a36a.jpg.thumb.jpg");
+//      urlList.add("http://kuoo8.com/wall_up/hsf2288/200801/2008012919460743597.jpg");   
+        urlList.add("http://attach.bbs.miui.com/forum/201604/05/001754vp6j0vmcj49f0evc.jpg.thumb.jpg");   
+        urlList.add("http://d.3987.com/taiqiumein_141001/007.jpg");   
+        urlList.add("http://attach.bbs.miui.com/forum/201604/05/100838d2b99k6ihk32a36a.jpg.thumb.jpg");   
 
         imageDescList.add("小仓柚子");
         imageDescList.add("抚媚妖娆性感美女");
@@ -103,11 +103,11 @@
 友情提示：
 
 一： 不要忘记添加  联网  读写 权限， 可以复制 本项目中的权限 。
+二：保证 ImageCycleView的 父布局是LinearLayout 否则可能会报异常，比如 java.lang.ClassCastException: android.widget.LinearLayout$LayoutParams cannot be cast to android.widget.RelativeLayout$LayoutParams    
 
+三： 不要忘记添加 图片缓存框架， 本Demo 中用的是  Android-Universal-Image-Loader ,本地jar包。
 
-二： 不要忘记添加 图片缓存框架， 本Demo 中用的是  Android-Universal-Image-Loader ,本地jar包。
-
-三： 工具类 皆可使用本Demo 中已有的。
+四： 工具类 皆可使用本Demo 中已有的。
 
 
 ps: 如还有疑问，可加QQ群 ：编程之美 230274309
