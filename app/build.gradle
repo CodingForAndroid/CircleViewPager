@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'//增加这一句
 
 android {
     compileSdkVersion 23
@@ -6,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.jorge.circleviewpager"
-        minSdkVersion 15
+        minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -20,9 +21,16 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:appcompat-v7:22.2.1'
     compile project(':circlelibrary')
     compile files('libs/imageloder.jar')
+    //    compile 'com.google.android.gms:play-services-analytics:9.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.jakewharton:butterknife:8.1.0'
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'   //增加这一句
+
 }
+
+//apply plugin: 'com.google.gms.google-services'

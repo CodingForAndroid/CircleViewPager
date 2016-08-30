@@ -1,23 +1,31 @@
 package com.jorge.circleviewpager;
 
+import android.app.Activity;
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
 import com.jorge.circlelibrary.ImageCycleView;
+
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.ButterKnife;
+
+public class MainActivity extends Activity {
     ImageCycleView imageCycleView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         /** 找到轮播控件*/
         imageCycleView= (ImageCycleView) findViewById(R.id.cycleView);
+
+        imageCycleView.setCycle_T(ImageCycleView.CYCLE_T.CYCLE_VIEW_THREE_SCALE);
         /**装在数据的集合  文字描述*/
         ArrayList<String> imageDescList=new ArrayList<>();
         /**装在数据的集合  图片地址*/
@@ -49,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onImageClick(int position, View imageView) {
                 /**实现点击事件*/
+                Toast.makeText(MainActivity.this,"position="+position,Toast.LENGTH_SHORT).show();
             }
             @Override
             public void displayImage(String imageURL, ImageView imageView) {
