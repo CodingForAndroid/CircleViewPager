@@ -2,7 +2,7 @@
  
    轮播图目前支持三种效果         
     //通过ImageCycleView.CYCLE_T选择切换类型  效果如下图所示     
-    //CYCLE_VIEW_NORMAL  CYCLE_VIEW_THREE_SCALE   CYCLE_VIEW_ZOOM_IN        
+    //CYCLE_VIEW_NORMAL     CYCLE_VIEW_THREE_SCALE      CYCLE_VIEW_ZOOM_IN          
     可以通过设置imageCycleView.setCycle_T(ImageCycleView.CYCLE_T.CYCLE_VIEW_THREE_SCALE);随意选择       
  自动轮播图  
    CYCLE_VIEW_NORMAL:    
