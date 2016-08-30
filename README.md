@@ -94,7 +94,7 @@ Android  自动轮播图，接入方便 ，欢迎使用~
 可通过 build.gradle 直接导入
 
   dependencies {
-    compile 'com.jorge.circleview:circlelibrary:1.0.0'
+    compile 'com.jorge.circleview:circlelibrary:1.0.1'
 }
 
 
