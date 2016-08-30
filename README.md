@@ -20,12 +20,12 @@
 
 
 
-相关Activity中
-    ImageCycleView imageCycleView;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+相关Activity中   
+    ImageCycleView imageCycleView;   
+    @Override   
+    protected void onCreate(Bundle savedInstanceState) {   
+        super.onCreate(savedInstanceState);   
+        setContentView(R.layout.activity_main);   
 
         /** 找到轮播控件*/
         imageCycleView= (ImageCycleView) findViewById(R.id.cycleView);
