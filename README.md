@@ -78,7 +78,9 @@
             }
         };
         /**设置数据*/
-        imageCycleView.setImageResources(imageDescList,urlList, mAdCycleViewListener);
+        imageCycleView.setImageResources(imageDescList,urlList, mAdCycleViewListener);   
+           // 是否隐藏底部   
+        imageCycleView.hideBottom(true);   
         imageCycleView.startImageCycle();
     }
 
@@ -100,7 +102,7 @@
 可通过 build.gradle 直接导入或者下载本Demo，拷贝到自己的Project中。   
 
   dependencies {
-    compile 'com.jorge.circleview:circlelibrary:1.0.1'
+    compile 'com.jorge.circleview:circlelibrary:1.1.1'
 }
 
 
