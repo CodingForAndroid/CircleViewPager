@@ -1,12 +1,12 @@
 # CircleViewPager
-自动轮播图
+ 自动轮播图
    CYCLE_VIEW_NORMAL:
   ![image](https://github.com/CodingForAndroid/CircleViewPager/blob/master/screenshot/CYCLE_VIEW_NORMAL.gif)
   CYCLE_VIEW_THREE_SCALE:
   ![image](https://github.com/CodingForAndroid/CircleViewPager/blob/master/screenshot/CYCLE_VIEW_THREE_SCALE.gif)
   CYCLE_VIEW_ZOOM_IN:
   ![image](https://github.com/CodingForAndroid/CircleViewPager/blob/master/screenshot/CYCLE_VIEW_ZOOM_IN.gif)
-Android  自动轮播图，接入方便 ，欢迎使用~
+ Android  自动轮播图，接入方便 ，欢迎使用~
 
  使用说明：
 
