@@ -10,7 +10,7 @@ import java.io.RandomAccessFile;
  */
 public class FileUtils {
 
-	public static final String ROOT_DIR = "AppCartoon";
+	public static final String ROOT_DIR = "CircleViewPager";
 	public static final String DOWNLOAD_DIR = "download";
 	public static final String CACHE_DIR = "cache";
 	public static final String ICON_DIR = "pics";
