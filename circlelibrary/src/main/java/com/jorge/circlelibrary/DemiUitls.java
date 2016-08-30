@@ -3,9 +3,7 @@ package com.jorge.circlelibrary;
 import android.app.Activity;
 import android.content.Context;
 
-/**
- * 这个工具类用来说明一些尺寸通用操作
- */
+
 public final class DemiUitls {
 
     public static  int dip2px(Context context, float dpValue)

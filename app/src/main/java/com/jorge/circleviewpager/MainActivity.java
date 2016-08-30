@@ -67,6 +67,8 @@ public class MainActivity extends Activity {
         };
         /**设置数据*/
         imageCycleView.setImageResources(imageDescList,urlList, mAdCycleViewListener);
+        // 是否隐藏底部
+        imageCycleView.hideBottom(true);
         imageCycleView.startImageCycle();
     }
 

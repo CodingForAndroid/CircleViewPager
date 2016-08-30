@@ -7,8 +7,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 
-/**  ÓĞ°´Ñ¹Ğ§¹ûµÄImageView
- * @author£ºJorge on 2015/9/10 12:40
+/**  æœ‰æŒ‰å‹æ•ˆæœçš„ImageView
+ * @authorï¼šJorge on 2015/9/10 12:40
  */
 public class ClickableImageView extends ImageView {
     public ClickableImageView(Context context) {
@@ -26,7 +26,7 @@ public class ClickableImageView extends ImageView {
         this.setOnTouchListener(VIEW_TOUCH_DARK);
     }
     public OnTouchListener VIEW_TOUCH_DARK = new OnTouchListener() {
-        // ±ä°µ(Èı¸ö-50£¬ÖµÔ½´óÔòĞ§¹ûÔ½Éî)
+        // å˜æš—(ä¸‰ä¸ª-50ï¼Œå€¼è¶Šå¤§åˆ™æ•ˆæœè¶Šæ·±)
         public final float[] BT_SELECTED_DARK = new float[] { 1, 0, 0, 0, -50,
                 0, 1, 0, 0, -50, 0, 0, 1, 0, -50, 0, 0, 0, 1, 0 };
         @Override
@@ -42,7 +42,7 @@ public class ClickableImageView extends ImageView {
                 ImageView iv = (ImageView) v;
                 iv.clearColorFilter();
             }
-            return true; // ÈçÎªfalse£¬Ö´ĞĞACTION_DOWNºó²»ÔÙÍùÏÂÖ´ĞĞ
+            return true; // å¦‚ä¸ºfalseï¼Œæ‰§è¡ŒACTION_DOWNåä¸å†å¾€ä¸‹æ‰§è¡Œ
         }
     };
     private void mPerformClick() {
