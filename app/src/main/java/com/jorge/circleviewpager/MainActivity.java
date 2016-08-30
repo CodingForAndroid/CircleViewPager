@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
         /** 找到轮播控件*/
         imageCycleView= (ImageCycleView) findViewById(R.id.cycleView);
 
-        imageCycleView.setCycle_T(ImageCycleView.CYCLE_T.CYCLE_VIEW_THREE_SCALE);
+        imageCycleView.setCycle_T(ImageCycleView.CYCLE_T.CYCLE_VIEW_NORMAL);
         /**装在数据的集合  文字描述*/
         ArrayList<String> imageDescList=new ArrayList<>();
         /**装在数据的集合  图片地址*/
