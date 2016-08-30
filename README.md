@@ -1,6 +1,11 @@
 # CircleViewPager
 自动轮播图
-  ![image](https://github.com/CodingForAndroid/CircleViewPager/blob/master/screenshot/view.gif)
+   CYCLE_VIEW_NORMAL:
+  ![image](https://github.com/CodingForAndroid/CircleViewPager/blob/master/screenshot/CYCLE_VIEW_NORMAL.gif)
+  CYCLE_VIEW_THREE_SCALE:
+  ![image](https://github.com/CodingForAndroid/CircleViewPager/blob/master/screenshot/CYCLE_VIEW_THREE_SCALE.gif)
+  CYCLE_VIEW_ZOOM_IN:
+  ![image](https://github.com/CodingForAndroid/CircleViewPager/blob/master/screenshot/CYCLE_VIEW_ZOOM_IN.gif)
 Android  自动轮播图，接入方便 ，欢迎使用~
 
  使用说明：
@@ -24,6 +29,8 @@ Android  自动轮播图，接入方便 ，欢迎使用~
         /** 找到轮播控件*/
         imageCycleView= (ImageCycleView) findViewById(R.id.cycleView);
         // 选择切换类型
+        //ImageCycleView.CYCLE_T 有三种类型 ,效果如上图所示
+        //CYCLE_VIEW_NORMAL  CYCLE_VIEW_THREE_SCALE   CYCLE_VIEW_ZOOM_IN   可以随意选择
         imageCycleView.setCycle_T(ImageCycleView.CYCLE_T.CYCLE_VIEW_THREE_SCALE);
         /**装在数据的集合  文字描述*/
         ArrayList<String> imageDescList=new ArrayList<>();
