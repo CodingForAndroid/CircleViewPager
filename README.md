@@ -116,6 +116,7 @@
 
 四： 工具类 皆可使用本Demo 中已有的。
 
+五：imageCycleView.hideBottom(false) 设置是否展示轮播指示图标
 
 ps: 如还有疑问，可加QQ群 ：编程之美 230274309
 
